@@ -1,0 +1,57 @@
+<%- include('../includes/head.ejs') %>
+
+<%- include('../includes/nav.ejs') %>
+      
+<div class="container">
+    <div class="jumbotron">
+      <% if (errorMessage) { %>
+        <div class="alert alert-danger text-center" role="alert"><%= errorMessage %></div>
+      <% } %>
+      <form class="form-horizontal" method="POST" action="/signup">
+        <div class="form-group <%= validationErrors.find(e => e.param === 'email') ? 'has-error' : '' %>">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input 
+            type="email" 
+            name="email" 
+            class="form-control" 
+            id="email" 
+            placeholder="Email"
+            value="<%= oldInput.email %>">
+          </div>
+        </div>
+        <div class="form-group <%= validationErrors.find(e => e.param === 'password') ? 'has-error' : '' %>">
+            <label for="password" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+              <input 
+              type="password" 
+              name="password" 
+              class="form-control" 
+              id="password" 
+              placeholder="Password"
+              value="<%= oldInput.password %>">
+            </div>
+        </div>
+        <div class="form-group <%= validationErrors.find(e => e.param === 'confirmPassword') ? 'has-error' : '' %>">
+            <label for="confirmPassword" class="col-sm-2 control-label">Confirm Password</label>
+            <div class="col-sm-10">
+              <input 
+              type="password" 
+              name="confirmPassword" 
+              class="form-control" 
+              id="confirmPassword" 
+              placeholder="Password"
+              value="<%= oldInput.confirmPassword %>">
+            </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign up</button>
+          </div>
+        </div>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      </form>
+    </div>
+</div>
+
+<%- include('../includes/footer.ejs') %>

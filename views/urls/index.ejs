@@ -1,0 +1,29 @@
+
+<%- include('../includes/head.ejs') %>
+
+
+<%- include('../includes/nav.ejs') %>
+      <div class="container">
+          <div class='jumbotron'>
+            <% if (errorMessage) { %>
+              <div class="alert alert-danger text-center" role="alert"><%= errorMessage %></div>
+            <% } %>
+            <form method="POST" action="/url/shortened">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Url</label>
+                  <input type="text" name="long_url" class="form-control" id="long_url" placeholder="Url to shorten">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+              <% if (shortened){ %>
+                <div class="text-center">
+                  <h5>Please copy or click on the following url:</h5>
+                  <h5><a href="http://<%= domain %>/url/<%= url.short_url %>"><%= domain %>/url/<%= url.short_url %></a></h5>
+                </div>
+              <% } %>
+          </div>
+          
+      </div>
+
+<%- include('../includes/footer.ejs') %>
