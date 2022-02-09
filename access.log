@@ -1,0 +1,6 @@
+::1 - - [08/Feb/2022:23:58:56 +0000] "GET /url/url-list HTTP/1.1" 200 - "http://localhost:3000/url" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
+::1 - - [08/Feb/2022:23:59:01 +0000] "POST /logout HTTP/1.1" 302 52 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
+::1 - - [08/Feb/2022:23:59:03 +0000] "GET /url HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
+::1 - - [08/Feb/2022:23:59:06 +0000] "GET /url/url-list HTTP/1.1" 302 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
+::1 - - [08/Feb/2022:23:59:06 +0000] "GET /login HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
+::1 - - [08/Feb/2022:23:59:09 +0000] "GET /signup HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
